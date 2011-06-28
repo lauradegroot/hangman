@@ -9,22 +9,20 @@ puts"Go get the other guy and bring him here"
 sleep 2
 puts "Hey guy, welcome. The word contains #{player1_word.length} letters. Guess a letter."
 
-guessed_letter = gets.chomp 
 
-if player1_word.include? guessed_letter
-    puts "Sweet! You're a genius. Guess again."
-if not player1_word.include? guessed_letter
-    puts "Nope! Guess again."
-end 
+
 
 max = 5
 guessed_letters = Array.new
-guessed_letters << guessed_letter
+game_over = false
 
 while not game_over
+  guessed_letter = gets.chomp 
+  
     if (guessed_letters.include? guessed_letter)
-    puts :you_already_guessed_that_letter
-    next
+      puts :you_already_guessed_that_letter
+      next
+      guessed_letters << guessed_letter
   end
   if not (guessed_letters.include? guessed_letter)
     puts :good_guess
@@ -32,5 +30,4 @@ while not game_over
     puts :bad_guess
   end
   game_over = true if guessed_letters.size > 5
-end
 end
