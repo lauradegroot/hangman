@@ -1,13 +1,13 @@
-puts "WELCOME TO HANGMAAAAAN"
+puts "WELCOME TO HANGPERRRSSOOOOON"
 sleep 1
-puts "What is your hangman word?"
+puts "What is your hangperson word?"
 player1_word = gets.chomp
 puts "You said #{player1_word}"
 sleep 1
 system "clear"
-puts"Go get the other guy and bring him here"
+puts"Go get the other person and bring them here"
 sleep 2
-puts "Hey guy, welcome. The word contains #{player1_word.length} letters. Guess a letter."
+puts "Hey person, welcome. The word contains #{player1_word.length} letters. Guess a letter."
 
 
 
